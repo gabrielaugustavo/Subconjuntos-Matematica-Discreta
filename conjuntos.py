@@ -119,20 +119,18 @@ def sobrejetora(rel , n):
 
 def lista(): # cria uma lista com elementos inseridos no input
     lista = []
-    while True:
-        elem = input("Insira elemento no conjunto desejado, pressione enter para encerrar:")
-        if elem == "":
-            break
-        lista.append(int(elem))
+    elem = int(input("Insira o total de elementos no conjunto desejado:"))
+    for i in range (elem):
+            lista.append((i)+1)
+
     return lista
 
-arq = open("Classificacao", "w")
+arq = open("subconjuntos", "w")
 import time 
 antes = time.time() # faz a contagem do tempo
 r = lista()   
 p = produto_cartesiano(r)
 partes_de_conj(p,len(r))
-
 arq.close()
 depois = time.time()
 print(depois - antes)
