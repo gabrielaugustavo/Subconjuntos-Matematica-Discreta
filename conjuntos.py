@@ -5,6 +5,7 @@ def produto_cartesiano(conj): # faz o estabelecimento de cada possibilidade de c
             resultado += [[i,j]]
     return resultado
 
+
 def partes_de_conj(p, n): # analisa e define as partes do conjunto
   r = []
   for aux in range(2**(len(p))): 
